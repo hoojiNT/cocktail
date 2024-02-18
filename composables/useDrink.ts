@@ -20,12 +20,12 @@ export function useCocktailDbFetch<T>(
     //   ? { Authorization: `Bearer ${userAuth.value}` }
     //   : {},
 
-    onResponse(_ctx) {
+    onResponse(_ctx: any) {
       // _ctx.response._data = new myBusinessResponse(_ctx.response._data)
       console.log(_ctx.response.json());
     },
 
-    onResponseError(_ctx) {
+    onResponseError(_ctx: any) {
       // throw new myBusinessError()
       console.log("error:", _ctx.error);
     },
